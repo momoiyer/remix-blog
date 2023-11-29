@@ -1,14 +1,11 @@
-import type { MetaFunction } from "@remix-run/node";
-
-export const meta: MetaFunction = () => {
-  return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
-  ];
-};
-
-export default function Index() {
+function Home() {
   return (
-   <h1>My App!</h1>
-  );
+    <div>
+      <h1>Welcome to Remix</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui ad veniam inventore harum dolorum! Nisi vitae mollitia ea obcaecati dolorum in enim soluta accusamus optio, temporibus consectetur sit quidem aliquam.</p>
+      
+    </div>
+  )
 }
+
+export default Home
