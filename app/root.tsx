@@ -1,4 +1,4 @@
-import { Outlet, LiveReload, Link, Links, Meta } from "@remix-run/react";
+import { Outlet, LiveReload, Link, Links, Meta, useRouteError } from "@remix-run/react";
 import globalStylesUrl from '~/styles/global.css'
 
 export const links = () => [{ rel: 'stylesheet', href: globalStylesUrl }];
@@ -62,5 +62,18 @@ function Layout({ children }) {
         {children}
       </div>
     </>
+  )
+}
+
+export function ErrorBoundary() {
+  const error = useRouteError();
+  console.log(error);
+  return (
+    <Document>
+      <Layout>
+        <h1>Error</h1>
+        <pre>{error.message}</pre>
+      </Layout>
+    </Document>
   )
 }

@@ -9,7 +9,6 @@ export const action = async ({ request }) => {
 
   //@todo - submit to database
 
-  console.log(fields)
   return redirect('/posts');
 }
 
@@ -38,4 +37,5 @@ function NewPost() {
   )
 }
 
-export default NewPost
+export default NewPost;
+
