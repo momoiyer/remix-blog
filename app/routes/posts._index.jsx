@@ -2,8 +2,6 @@ import { Link, useLoaderData } from "@remix-run/react";
 import { db } from '~/utils/db.server';
 
 export const loader = async () => {
-  //server side
-
 const data = {
   posts: await db.post.findMany({
     take: 20,
